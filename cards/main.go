@@ -1,10 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
-	deck := newDeck()
+	cards := newDeck()
 
-	hand, remainingCards := deal(deck, 5)
-
-	hand.print()
-	remainingCards.print()
+	fmt.Println([]byte(cards.toString()))
 }
