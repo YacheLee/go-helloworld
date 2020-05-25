@@ -5,21 +5,20 @@ import "fmt"
 type deck []string
 
 func newDeck() deck {
-	cards := deck{}
+	decks := deck{}
 
 	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Card"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			cards = append(cards, value+" of "+suit)
+			decks = append(decks, value+" of "+suit)
 		}
 	}
 
-	return cards
+	return decks
 }
 
-//receiver
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
